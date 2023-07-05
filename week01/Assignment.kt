@@ -1,15 +1,16 @@
-open class Human(var name: String){
+open class Human(var name: String, var mana: Int) {
 
-//    private var name: String
-//    init{
-//        this.name = name.uppercase()
-//    }
     open fun attack() {
-        println("${this.name} use Fist Attack!")
+        if (mana > 50) {
+            println("${this.name} use Fist Attack!")
+        } else {
+            println(" Not enough mana!")
+        }
     }
 }
 
-class Mega(name: String): Human( name ){
+
+class Mega(name: String, mana: Int): Human(name, mana){
 
     override fun attack(){
         println("$name use Fireball!")
@@ -18,16 +19,9 @@ class Mega(name: String): Human( name ){
 
 
 fun main(){
-
-    var human = Human("Mario")
-    var mana: Int = 100
-
-    when (mana){
-        in 0..50 -> println("Not enough mana to attack!!")
-        else -> human.attack()
-    }
-
-    var mega = Mega("Yoshi")
+    var human = Human("Mario", 10)
+    human.attack()
+    var mega = Mega("Yoshi", 200)
     mega.attack()
 
 }
