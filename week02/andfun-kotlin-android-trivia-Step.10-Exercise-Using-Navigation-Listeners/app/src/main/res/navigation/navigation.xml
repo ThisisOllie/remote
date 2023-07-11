@@ -87,7 +87,7 @@
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/profile2Layout"
-        android:name="com.example.android.navigation.profile2Fragment"
+        android:name="com.example.android.navigation.Profile2Fragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile2" />
 </navigation>
