@@ -1,0 +1,35 @@
+1. What is Encapsulation? Try to list out the benefits of Encapsulation.
+是將相關的method和data共同封裝起來，如下，class中包含了name和bday的資料，
+且相關的操作方法 fun greeting()也綁在一起，可以達到減少重複性的程式碼出現，讓程式碼更加簡潔好維護。
+
+class Human(name: string, bday: Ing){
+
+	fun greeting(){
+		println("Happy birthday")}
+
+}
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+2. Try to explain what enum is and why we use them.
+可以創建一組有效的值，這些值則代表variable的唯一有效值，存入enum的值也是常數。
+主要是可以使程式碼更簡潔且容易維護
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+3. How to use enum in Kotlin? Attach a sample code that uses enum in Kotlin.
+
+enum class Tree {root, leaves, trunk , branch}
+
+fun main(){
+	val treeComponent = Tree.root //指定其中一個Tree's value給這個變數
+}
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+4. What are the differences between LinearLayout and RelativeLayout? Try to explain in detail.
+LinearLayout主要以線性的方式對view佈局（可以是水平線性佈局或垂直線性性佈局），使用時view的排列也只能遵循水平
+（例如常使用在user註冊畫面，需要一行一行逐一更新基本資料，會常用此佈局）
+RelativeLayout，則可以依據所需要的畫面去對每個child view做排列
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+5. Try to explain the benefits of ConstraintLayout. Why should you use it?
+
+ConstraintLayout中有bias value，可以對每個child view坐在畫面上的任意佈局，而不需要使用到巢狀結構
+在效能上也比relativeLayout表現更好
