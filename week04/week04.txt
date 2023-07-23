@@ -1,0 +1,51 @@
+1. What is Polymorphism? Try to explain in Mandarin.
+當繼承發生後，subclass做override 來自superclass的mehtods時，同一個（相同名稱）的method會用不同的結果。例如
+Open class Animal(){
+	open fun sound(
+	println("Hello"))}
+
+class Dog: Animal(){
+	override fun sound(
+	println("bark") ) }
+2. Here are the 7 important lifecycle methods of an Activity: 
+Try to explain when they are called during the lifecycle of Activity.
+
+onCreate()
+系統首次創建Activity的時候會觸發，並且進入Created狀態
+onCreate()的程式碼，主要工作是設定view
+
+onStart() 
+onCreate()執行完後，會調用onStart()
+Activity會進入Started狀態，此時APP會出現在手機的最上層，user看得見
+
+onResume() 
+onStart()完成後，系統會調用onResume()，Activity就會進入Resumed狀態，
+此時代表user正在和此APP的activity做互動中
+
+onPause() 
+若user在進行互動過程中產生中斷的事件（例如導航到另一個APP或把APP放入背景中）就會調用onPause()
+讓APP進入Pause狀態
+
+onStop() 
+當我們不再使用此APP或離開和activity互動後，接續onPause()後會會執行onStop()
+在此時也可以加入onStopInstance()去儲存少量的data
+
+onDestroy()
+當用戶不再使用此APP或者當螢幕做旋轉的時候，都會調用onDestroy
+
+
+
+3. What is the Android Jetpack?
+他是一系列的程式庫，主要在協助開發人員能夠精簡以及好維護程式碼
+主要包含四個元件：Foundation, Architecture, Behavior, UI
+例如：Architecture就包含我們學過的，LiveData, Data Binding, Lifecycle,
+Navigation, Room, ViewMode等
+
+
+4. What is Coroutines? Why do we use it? Try to explain in Mandarin.
+多執行緒是當電腦有許多排程要同時執行的時候，作業系統的Scheduler可以對需要進行的Thread做安排。
+若執行到比較複雜的thread，例如他要去調用其他文件的時候（需要花費時間），那此條Thread可以先做暫停，
+釋出CPU的資源，先去做其他條Thread。等到文件調出後，再回去繼續執行剛剛的Thread，避免CPU的資源被浪費
+
+
+ android:text="@{property.isRental? Double.toString(property.price)+`/month`: Double.toString(property.price)}"
