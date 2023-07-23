@@ -7,8 +7,10 @@ Open class Animal(){
 class Dog: Animal(){
 	override fun sound(
 	println("bark") ) }
-2. Here are the 7 important lifecycle methods of an Activity: 
+
+----------------------------------------------------------------------2. Here are the 7 important lifecycle methods of an Activity: 
 Try to explain when they are called during the lifecycle of Activity.
+
 
 onCreate()
 系統首次創建Activity的時候會觸發，並且進入Created狀態
@@ -34,14 +36,14 @@ onDestroy()
 當用戶不再使用此APP或者當螢幕做旋轉的時候，都會調用onDestroy
 
 
-
+----------------------------------------------------------------------
 3. What is the Android Jetpack?
 他是一系列的程式庫，主要在協助開發人員能夠精簡以及好維護程式碼
 主要包含四個元件：Foundation, Architecture, Behavior, UI
 例如：Architecture就包含我們學過的，LiveData, Data Binding, Lifecycle,
 Navigation, Room, ViewMode等
 
-
+----------------------------------------------------------------------
 4. What is Coroutines? Why do we use it? Try to explain in Mandarin.
 多執行緒是當電腦有許多排程要同時執行的時候，作業系統的Scheduler可以對需要進行的Thread做安排。
 若執行到比較複雜的thread，例如他要去調用其他文件的時候（需要花費時間），那此條Thread可以先做暫停，
